@@ -6,6 +6,10 @@
 img {
   max-width: 100%;
 }
+a {
+  text-decoration: none;
+  color: rgb(135, 135, 135);
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -67,4 +71,21 @@ ul {
   color: rgb(46, 45, 57);
   background-color: rgb(218, 192, 46);
   border-radius: 16px;
+}
+.nav-bar {
+  background-color: rgb(203, 203, 203);
+  padding: 30px;
+}
+.nav-inline {
+  display: flex;
+  text-decoration: none;
+}
+.link {
+  list-style: none;
+  color: rgb(48, 48, 48);
+  padding-right: 40px;
+  font-size: 20px;
+}
+.active {
+  color: rgb(69, 69, 69);
 }
