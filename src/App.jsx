@@ -1,10 +1,12 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import DefaultLayout from "./Layout/DefaultLayout";
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route patch="/" element={<Homepage />} />
+        <Route element={<DefaultLayout />} />
+        <Route path="/" element={<Homepage />} />
       </Routes>
     </BrowserRouter>
   );
