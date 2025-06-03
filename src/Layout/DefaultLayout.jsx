@@ -14,7 +14,7 @@ export default function DefaultLayout() {
             </li>
 
             <li className="link">
-              <NavLink to="/Attori">Attori</NavLink>
+              <NavLink to="/Ricette">Ricette</NavLink>
             </li>
           </ul>
         </div>

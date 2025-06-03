@@ -42,7 +42,6 @@ ul {
   overflow: hidden;
 }
 .img-card-container {
-  height: 350px;
   overflow: hidden;
 }
 .img-card {
@@ -88,4 +87,7 @@ ul {
 }
 .active {
   color: rgb(69, 69, 69);
+}
+.contenuto {
+  padding-top: 10px;
 }
