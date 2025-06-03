@@ -39,9 +39,9 @@ export default function Ricette() {
               </div>
 
               <p className="contenuto">{d.content}</p>
-            </div>
-            <div key={d.id}>
-              <Link to={`/Ricette/${d.id}`}>Dettaglio</Link>
+              <div className="dettaglio-button" key={d.id}>
+                <Link to={`/Ricette/${d.id}`}>Dettaglio</Link>
+              </div>
             </div>
           </div>
         ))}

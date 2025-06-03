@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import axios from "axios";
 
 const apiBaseUrl = "http://localhost:3000/posts";
@@ -19,36 +21,23 @@ export default function Dettaglio() {
 
   return (
     <>
-      <img
-        className="img-card"
-        src={`http://localhost:3000${ricetta.image}`}
-        alt=""
-      />
-      <h2 className="title">{ricetta.title}</h2>
-      {ricetta.tags.map((tagg) => (
-        <p>{tagg}</p>
-      ))}
-      {/* {datas.map((dett) => (
-          <div key={dett.id} className="actor-card card-30">
-            <div className="img-card-container">
-              <img
-                className="img-card"
-                src={`http://localhost:3000${dett.image}`}
-                alt=""
-              />
-            </div>
-            <div className="container-info">
-              <div className="container-name">
-                <h2>{dett.title}</h2>
-                {dett.tags.map((tag) => (
-                  <a className="birth">{tag}</a>
-                ))}
-              </div>
-
-              <p className="contenuto">{dett.content}</p>
-            </div>
+      <div className="container dettaglio-container">
+        <Link className="indietro" to={`/Ricette`}>
+          Indietro
+        </Link>
+        <div className="card-dettaglio">
+          <img
+            className="img-card-dettaglio"
+            src={`http://localhost:3000${ricetta.image}`}
+            alt=""
+          />
+          <div className="card-descrizione-dettaglio">
+            <h2 className="title">{ricetta.title}</h2>
+            <p className="birth">{ricetta.tags}</p>
+            <p className="descrizione-dettaglio">{ricetta.content}</p>
           </div>
-        ))} */}
+        </div>
+      </div>
     </>
   );
 }

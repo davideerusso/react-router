@@ -91,3 +91,31 @@ ul {
 .contenuto {
   padding-top: 10px;
 }
+.indietro {
+  background-color: rgb(203, 203, 203);
+  margin-top: 80px;
+  color: rgb(69, 69, 69);
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.dettaglio-container {
+  margin-top: 40px;
+}
+.card-dettaglio {
+  padding-top: 40px;
+}
+.img-card-dettaglio {
+  border-radius: 10px;
+  width: 100%;
+}
+.card-descrizione-dettaglio {
+  padding-top: 20px;
+}
+.descrizione-dettaglio {
+  padding-top: 20px;
+}
+.dettaglio-button {
+  padding-top: 20px;
+  font-weight: 200;
+}
