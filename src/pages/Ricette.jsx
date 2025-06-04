@@ -14,7 +14,7 @@ export default function Ricette() {
       setDatas(data);
       return;
     });
-  }, [datas]);
+  }, []);
 
   return (
     <>
