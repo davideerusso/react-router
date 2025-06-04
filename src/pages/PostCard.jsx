@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 
-const apiBaseUrl = "http://localhost:3000/posts";
-
-export default function Dettaglio() {
+export default function PostCard() {
   const { id } = useParams();
   const [ricetta, setRicetta] = useState([]);
 

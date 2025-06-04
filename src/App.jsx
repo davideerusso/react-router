@@ -1,24 +1,27 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import ChiSiamo from "./pages/ChiSiamo";
-import Ricette from "./pages/Ricette";
-import Dettaglio from "./pages/Dettaglio";
-
+import PostCard from "./pages/PostCard";
+import RicettePage from "./pages/RicettePage";
 import DefaultLayout from "./Layout/DefaultLayout";
+
+import { PostProvider } from "./componens/PostContext";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<DefaultLayout />}>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/ChiSiamo" element={<ChiSiamo />} />
-          <Route path="/Ricette">
-            <Route index element={<Ricette />} />
-            <Route path=":id" element={<Dettaglio />} />
+    <PostProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/ChiSiamo" element={<ChiSiamo />} />
+            <Route path="/Ricette">
+              <Route index element={<RicettePage />} />
+              <Route path=":id" element={<PostCard />} />
+            </Route>
           </Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </PostProvider>
   );
 }

@@ -1,25 +1,10 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import axios from "axios";
-
-const apiBaseUrl = "http://localhost:3000/posts";
-
-export default function Ricette() {
-  const [datas, setDatas] = useState([]);
-
-  useEffect(() => {
-    axios.get(`${apiBaseUrl}`).then((res) => {
-      const data = res.data.data;
-      setDatas(data);
-      return;
-    });
-  }, []);
-
+export default function RicetteList({ posts }) {
   return (
     <>
       <div className="container container-flex">
-        {datas.map((d) => (
+        {posts.map((d) => (
           <div key={d.id} className="actor-card card-30">
             <div className="img-card-container">
               <img
